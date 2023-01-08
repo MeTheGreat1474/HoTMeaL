@@ -1,1 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>receipt</title>
+
+    <style type="text/css">
+      .receipt-box {
+        max-width: 800px;
+        margin: auto;
+        padding: 30px;
+        border: 1px solid #eee;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+        font-size: 16px;
+        line-height: 24px;
+        font-family: Arial, sans-serif;
+      }
+
+      .receipt-box table {
+        width: 100%;
+        line-height: inherit;
+        text-align: left;
+      }
+      .receipt-box table td {
+        padding: 5px;
+        vertical-align: top;
+      }
+      .receipt-box table tr td:nth-child(2) {
+        text-align: right;
+      }
+
+      .receipt-box table tr.top table td {
+        padding-bottom: 20px;
+      }
+
+      .receipt-box table tr.information table td {
+        padding-bottom: 40px;
+      }
+
+      .receipt-box table tr.heading td {
+        background: #eee;
+        border-bottom: 1px solid #ddd;
+        font-weight: bold;
+      }
+
+      .receipt-box table tr.details td {
+        padding-bottom: 20px;
+      }
+
+      .receipt-box table tr.item td {
+        border-bottom: 1px solid #eee;
+      }
+
+      @media only screen and (max-width: 600px) {
+        .receipt-box table tr.top table td {
+          width: 100%;
+          display: block;
+          text-align: center;
+        }
+        .receipt-box table tr.information table td {
+          width: 100%;
+          display: block;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="receipt-box">
+      <table cellpadding="0" cellspacing="0">
+        <tr class="top">
+          <td colspan="2">
+            <table>
+              <tr>
+                <td>
+                  <h4>PCAMS</h4>
+                </td>
+                <td>receipt <br /></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr class="information">
+          <td colspan="2">
+            <table>
+              <tr>
+                <td>
+                  Universiti Malaya, PASUM <br />
+                  Phone: 60 17 962 7052 <br />
+                </td>
+
+                <td>
+                  Web Developer: Danial <br />
+                  Android Developer: Taufiq <br />
+                  Email: sus@gmail.com
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr class="heading">
+          <td>Payment Method</td>
+          <td>Check #</td>
+        </tr>
+
+        <tr class="details">
+          <td>Check</td>
+          <td>1000</td>
+        </tr>
+        <tr class="heading">
+          <td>Item</td>
+          <td>Price</td>
+        </tr>
+        <tr class="item">
+          <td>Food item</td>
+          <td>0000</td>
+        </tr>
+        <tr>
+          <td>Beverage</td>
+          <td>0000</td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
 
