@@ -1,1 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--Web title and icon-->
+    <title>Cafe Selection</title>
+    <link rel="icon" href="UM1.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!--Icon Library-->
 
+    <!--CSS stylesheets-->
+    <link rel="stylesheet" href="style2.css" type="text/css">
+
+</head>
+
+<body>
+        <!--Header-->
+        <div class="header">
+            <nav>
+            <a href="https://www.um.edu.my/"><img src="um copy.png" class="logo"></a>
+            <ul class="nav-links">
+                <a href=""><button><i class="fa fa-home"></i> Home</button></a>
+                <a href="reportpage.html"><button><i class="fa fa-exclamation-circle"></i> Report</button></a>
+                <a href=""><button class="sign"><i class="fa fa-user-circle"></i> Sign Out</button></a>
+            </ul>
+            </nav>
+        </div>
+        <hr> <!--Line Break For Header-->
+
+        <h1>CAFE SELECTION</h1>
+
+        <!--Card Style-->
+        <div class="cardstyle">
+        
+            <div class="column">
+            <div class="c1"> <!--Cafe 1-->
+                <div class="content">
+                    <img src="cafe.jpg" alt="cafe1">
+                    <h4>Cafe 1</h4>
+                    <a href="#"><p><button class="card">Select</button></p></a>
+                </div>
+            </div>
+            </div>
+
+            <div class="column">
+            <div class="cafe"> <!--Cafe 2-->
+                <div class="overlay"> <!--Overlay effect-->
+                    <p class="text"><i class="fa fa-times-circle"></i> Under Development </p>
+                </div> 
+                <div class="content">
+                    <img src="cafe.jpg" alt="cafe2">
+                    <h4>Cafe 2</h4>
+                    <a href="#"><p><button class="card">Select</button></p></a>
+                </div>
+            </div>
+            </div>
+            
+            <div class="column">
+            <div class="cafe"> <!--Cafe 3-->
+                <div class="overlay"> <!--Overlay effect-->
+                    <p class="text"><i class="fa fa-times-circle"></i> Under Development </p>
+                </div> 
+                <div class="content">
+                    <img src="cafe.jpg" alt="cafe3">
+                    <h4>Cafe 3</h4>
+                    <a href="#"><p><button class="card">Select</button></p></a>
+                </div>
+            </div>
+            </div>
+
+            <div class="column">
+            <div class="cafe"> <!--Cafe 4-->
+                <div class="overlay"> <!--Overlay effect-->
+                    <p class="text"><i class="fa fa-times-circle"></i> Under Development </p>
+                </div> 
+                <div class="content">
+                    <img src="cafe.jpg" alt="cafe4">
+                    <h4>Cafe 4</h4>
+                   <a href="#"><p><button class="card">Select</button></p></a>
+                </div>
+            </div>
+            </div>
+
+            <div class="column">
+            <div class="cafe"> <!--Cafe 5-->
+                <div class="overlay"> <!--Overlay effect-->
+                    <p class="text"><i class="fa fa-times-circle"></i> Under Development </p>
+                </div> 
+                <div class="content">
+                    <img src="cafe.jpg" alt="kolej 5">
+                    <h4>Cafe 5</h4>
+                    <a href="#"><p><button class="card">Select</button></p></a>
+                </div>
+            </div>
+            </div>
+
+            <div class="column">
+            <div class="cafe"> <!--Cafe 6-->
+                <div class="overlay"> <!--Overlay effect-->
+                    <p class="text"><i class="fa fa-times-circle"></i> Under Development </p>
+                </div> 
+                <div class="content">
+                    <img src="cafe.jpg" alt="kolej 6">
+                    <h4>Cafe 6</h4>
+                    <a href="#"><p><button class="card">Select</button></p></a>
+                </div>
+            </div>
+            </div>
+            <!--End Off Card Style-->
+        </div>
+</body>
+</html>
