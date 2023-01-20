@@ -17,7 +17,7 @@
             <a href="https://www.um.edu.my/"><img src="um copy.png" class="logo"></a>
             <ul class="nav-links">
                 <a href=""><button><i class="fa fa-home"></i> Home</button></a>
-                <a href="reportpage.html"><button><i class="fa fa-exclamation-circle"></i> Report</button></a>
+                <a href="https://forms.gle/ZZGS53fhMMA6Pzki9"><button><i class="fa fa-exclamation-circle"></i> Report</button></a>
                 <a href=""><button><i class="fa fa-user-circle"></i> Sign Out</button></a>
             </ul>
             </nav>
