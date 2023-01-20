@@ -22,7 +22,7 @@
             <a href="https://www.um.edu.my/"><img src="um copy.png" class="logo"></a>
             <ul class="nav-links">
                 <a href=""><button><i class="fa fa-home"></i> Home</button></a>
-                <a href="reportpage.html"><button><i class="fa fa-exclamation-circle"></i> Report</button></a>
+                <a href="https://forms.gle/ZZGS53fhMMA6Pzki9"><button><i class="fa fa-exclamation-circle"></i> Report</button></a>
                 <a href=""><button class="sign"><i class="fa fa-user-circle"></i> Sign Out</button></a>
             </ul>
             </nav>
@@ -89,7 +89,7 @@
                     <p class="text"><i class="fa fa-times-circle"></i> Under Development </p>
                 </div> 
                 <div class="content">
-                    <img src="cafe.jpg" alt="kolej 5">
+                    <img src="cafe.jpg" alt="cafe5">
                     <h4>Cafe 5</h4>
                     <a href="#"><p><button class="card">Select</button></p></a>
                 </div>
@@ -102,7 +102,7 @@
                     <p class="text"><i class="fa fa-times-circle"></i> Under Development </p>
                 </div> 
                 <div class="content">
-                    <img src="cafe.jpg" alt="kolej 6">
+                    <img src="cafe.jpg" alt="cafe6">
                     <h4>Cafe 6</h4>
                     <a href="#"><p><button class="card">Select</button></p></a>
                 </div>
