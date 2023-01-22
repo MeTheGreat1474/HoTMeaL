@@ -1,0 +1,207 @@
+<html>
+    <head>
+        <!--Web title and icon-->
+        <title>College Selection</title>
+        <link rel="icon" href="UM1.png" type="image/x-icon">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!--Icon Library-->
+
+        
+        <!--CSS stylesheets-->
+        <link rel="stylesheet" href="style1.css" type="text/css">
+    </head>
+    
+    <body>
+        <!--Header-->
+        <div class="header">
+            <nav>
+            <a href="https://www.um.edu.my/"><img src="um copy.png" class="logo"></a>
+            <ul class="nav-links">
+                <a href=""><button><i class="fa fa-home"></i> Home</button></a>
+                <a href="https://forms.gle/ZZGS53fhMMA6Pzki9"><button><i class="fa fa-exclamation-circle"></i> Report</button></a>
+                <a href=""><button><i class="fa fa-user-circle"></i> Sign Out</button></a>
+            </ul>
+            </nav>
+        </div>
+        <hr> <!--Line Break For Header-->
+        
+        <!--Header Name For This Website-->
+        <h1>COLLEGE SELECTION</h1>
+        <!--<i class="fa fa-refresh fa-spin"></i>-->
+
+        <!--Filter Button-->
+        <!--
+        <div class="buttonfilter">
+            <button class="btn1">Show All</button>
+            <button class="btn2">Available Cafe</button>
+            <button class="btn3">Unavailable</button>
+            <button class="btn4">Coming Soon</button>
+        </div> -->
+
+        <!--Card Style-->
+        <div class="cardstyle">
+        
+            <div class="column">
+            <div class="kk"> <!--Kolej 1-->
+                <div class="overlay"> <!--Overlay effect-->
+                    <p class="text"><i class="fa fa-times-circle"></i> Under Development </p>
+                </div> 
+                <div class="content">
+                    <img src="kk1.png" alt="kolej 1">
+                    <h4>Kolej Kediaman 1</h4>
+                    <a href="error404page.html"><button class="card">Select</button></a>
+                </div>
+            </div>
+            </div>
+
+            <div class="column">
+            <div class="kk"> <!--Kolej 2-->
+                <div class="overlay"> <!--Overlay effect-->
+                    <p class="text"><i class="fa fa-times-circle"></i> Under Development </p>
+                </div> 
+                <div class="content">
+                    <img src="kk2.png" alt="kolej 2">
+                    <h4>Kolej Kediaman 2</h4>
+                    <a href="error404page.html""><button class="card">Select</button></a>
+                </div>
+            </div>
+            </div>
+            
+            <div class="column">
+            <div class="kk"> <!--Kolej 3-->
+                <div class="overlay"> <!--Overlay effect-->
+                    <p class="text"><i class="fa fa-times-circle"></i> Under Development</p>
+                </div> 
+                <div class="content">
+                    <img src="kk3.png" alt="kolej 3">
+                    <h4>Kolej Kediaman 3</h4>
+                    <a href="error404page.html"><button class="card">Select</button></a>
+                </div>
+            </div>
+            </div>
+
+            <div class="column">
+            <div class="kk"> <!--Kolej 4-->
+                <div class="overlay"> <!--Overlay effect-->
+                    <p class="text"><i class="fa fa-times-circle"></i> Under Development </p>
+                </div> 
+                <div class="content">
+                    <img src="kk4.png" alt="kolej 4">
+                    <h4>Kolej Kediaman 4</h4>
+                   <a href="error404page.html"><button class="card">Select</button></a>
+                </div>
+            </div>
+            </div>
+
+            <div class="column">
+            <div class="kk"> <!--Kolej 5-->
+                <div class="overlay"> <!--Overlay effect-->
+                    <p class="text"><i class="fa fa-times-circle"></i> Under Development </p>
+                </div> 
+                <div class="content">
+                    <img src="kk5.png" alt="kolej 5">
+                    <h4>Kolej Kediaman 5</h4>
+                    <a href="error404page.html"><button class="card">Select</button></a>
+                </div>
+            </div>
+            </div>
+
+            <div class="column">
+            <div class="kk"> <!--Koolej 6-->
+                <div class="overlay"> <!--Overlay effect-->
+                    <p class="text"><i class="fa fa-times-circle"></i> Under Development </p>
+                </div> 
+                <div class="content">
+                    <img src="kk6.png" alt="kolej 6">
+                    <h4>Kolej Kediaman 6</h4>
+                    <a href="error404page.html"><button class="card">Select</button></a>
+                </div>
+            </div>
+            </div>
+
+            <div class="column">
+            <div class="kk"> <!--Kolej 7-->
+                <div class="overlay"> <!--Overlay effect-->
+                    <p class="text"><i class="fa fa-times-circle"></i> Under Development </p>
+                </div> 
+                <div class="content">
+                    <img src="kk7.png" alt="kolej 7">
+                    <h4>Kolej Kediaman 7</h4>
+                    <a href="error404page.html"><button class="card">Select</button></a>
+                </div>
+            </div>
+            </div>
+
+            <div class="column">
+            <div class="kk"> <!--Kolej 8-->
+                <div class="overlay"> <!--Overlay effect-->
+                    <p class="text"><i class="fa fa-times-circle"></i> Under Development </p>
+                </div> 
+                <div class="content">
+                    <img src="kk8.png" alt="kolej 8">
+                    <h4>Kolej Kediaman 8</h4>
+                    <a href="error404page.html"><button class="card">Select</button></a>
+                </div>
+            </div>
+            </div>
+
+            <div class="column">
+            <div class="kk"> <!--Kolej 9-->
+                <div class="overlay"> <!--Overlay effect-->
+                    <p class="text"><i class="fa fa-times-circle"></i> Under Development </p>
+                </div> 
+                <div class="content">
+                    <img src="kk9.png" alt="kolej 9">
+                    <h4>Kolej Kediaman 9</h4>
+                    <a href="error404page.html"><button class="card">Select</button></a>
+                </div>
+            </div>
+            </div>
+
+            <div class="column">
+            <div class="kk"> <!--Kolej 10-->
+                <div class="overlay"> <!--Overlay effect-->
+                    <p class="text"><i class="fa fa-times-circle"></i> Under Development </p>
+                </div> 
+                <div class="content">
+                    <img src="kk10.png" alt="kolej 10">
+                    <h4>Kolej Kediaman 10</h4>
+                    <a href="error404page.html"><button class="card">Select</button></a>
+                </div>
+            </div>
+            </div>
+
+            <div class="column">
+            <div class="kk11"> <!--Kolej 11-->
+                <div class="content">
+                    <img src="kk11.png" alt="kolej 11">
+                    <h4>Kolej Kediaman 11</h4>
+                    <a href="cafeselection.html"><button class="card11">Select</button></a>
+                </div>
+            </div>
+            </div>
+
+            <div class="column">
+            <div class="kk"> <!--Kolej 12-->
+                <div class="overlay"> <!--Overlay effect-->
+                    <p class="text"><i class="fa fa-exclamation-circle"></i> Coming Soon </p>
+                </div> 
+                <div class="content">
+                    <img src="kk12.png" alt="kolej 12">
+                    <h4>Kolej Kediaman 12</h4>
+                    <a href="error404page.html"><button class="card12">Select</button></a>
+                </div>
+            </div>
+            </div>
+            <!--End Off Card Style-->
+        </div>
+
+        <!--Hoverable Sidenav-->
+        <div id="mySidenav" class="sidenav">
+            <a href="#" id="about"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+            <a href="#" id="blog"><i class="fa fa-telegram" aria-hidden="true"></i></a>
+            <a href="#" id="projects"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+            <a href="#" id="contact"><i class="fa fa-reddit" aria-hidden="true"></i></a>               
+        </div>
+        
+    </body>
+</html>
