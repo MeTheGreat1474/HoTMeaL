@@ -4,7 +4,7 @@
     <head>
         <title>PCAMS Order</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="css/order2.css" type="text/css" rel="stylesheet">
+        <link href="css/order.css" type="text/css" rel="stylesheet">
     </head>
 
     <body>
