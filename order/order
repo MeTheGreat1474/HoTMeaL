@@ -1,0 +1,157 @@
+<!Doctype html>
+<html lang="en">
+
+    <head>
+        <title>PCAMS Order</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/order2.css" type="text/css" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <div class="navbar">
+            <a href="">Home</a>
+        </div>
+
+        <img class="headerimg" id="cafe1" src="http://4.bp.blogspot.com/-1XZTv3ahsWk/VTRnJXq9wPI/AAAAAAAAIPk/1T0LQ91fq0c/s1600/DSC_0594.JPG">
+        <hr>
+
+        <div class="cafe-desc">
+            <h2>KEDAI GORENG HUJUNG</h2>
+            <p class="description">Burger, Kebab, Minuman </P><br>
+        </div><hr>
+
+
+        <!--DANIAL ni hang cantikkan la ikut hang, ltk header ngan logo skali-->
+        <!-- MAIN (Center website) -->
+        <div class="main">
+        
+            <h2>Menu</h2>
+
+            <div id="myBtnContainer">
+                <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+                <button class="btn" onclick="filterSelection('makanan')"> Makanan</button>
+                <button class="btn" onclick="filterSelection('minuman')"> Minuman </button>
+                <!--<button class="btn" onclick="filterSelection('mee')"> Mee</button>-->
+            </div>
+        
+            <div class="row">
+                <div class="column makanan">
+                    <div class="content">
+                        <a href="foodselected2.html">
+                        <img class="foodimg" src="food.jpg" alt="Burger Biasa" style="width:100%">
+                        <h4>Burger Biasa</h4></a>
+                        <p>RM 3.00</p>
+                    </div>
+                </div>
+                <div class="column makanan">
+                    <div class="content">
+                        <a href="foodselected2.html">
+                        <img class="foodimg" src="food.jpg" alt="Burger Cheese Leleh" style="width:100%">
+                        <h4>Burger Cheese Leleh</h4></a>
+                        <p>RM 4.00</p>
+                    </div>
+                </div>
+                <div class="column makanan">
+                    <div class="content">
+                        <a href="foodselected2.html">
+                        <img class="foodimg" src="food.jpg" alt="Kebab Biasa" style="width:100%">
+                        <h4>Kebab Biasa</h4></a>
+                        <p>RM 3.00</p>
+                    </div>
+                </div>
+          
+                <div class="column makanan">
+                    <div class="content">
+                        <a href="foodselected2.html">
+                        <img class="foodimg" src="food.jpg" alt="Kebab Cheese Leleh" style="width:100%">
+                        <h4>Kebab Cheese Leleh</h4></a>
+                        <p>RM 4.00</p>
+                    </div>
+                </div>
+                <div class="column minuman">
+                    <div class="content">
+                        <a href="foodselected2.html">
+                        <img class="foodimg" src="water.jpg" alt="Soya Biasa" style="width:100%">
+                        <h4>Soya Biasa</h4></a>
+                        <p>RM 2.00</p>
+                    </div>
+                </div>
+                <div class="column minuman">
+                    <div class="content">
+                        <a href="foodselected2.html">
+                        <img class="foodimg" src="water.jpg" alt="Soya Gula Melaka" style="width:100%">
+                        <h4>Soya Gula Melaka</h4></a>
+                        <p>RM 2.00</p>
+                    </div>
+                </div>
+        
+                <div class="column minuman">
+                    <div class="content">
+                        <a href="foodselected2.html">
+                        <img class="foodimg" src="water.jpg" alt="Soya Cincau Gula Melaka" style="width:100%">
+                        <h4>Soya Cincau Gula Melaka</h4></a>
+                        <p>RM 3.00</p>
+                    </div>
+                </div>
+                <div class="column minuman">
+                    <div class="content">
+                        <a href="foodselected2.html">
+                        <img class="foodimg" src="water.jpg" alt="Soya Boba" style="width:100%">
+                        <h4>Soya Boba</h4></a>
+                        <p>RM 3.00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <script>
+        filterSelection("all")
+        function filterSelection(c) {
+          var x, i;
+          x = document.getElementsByClassName("column");
+          if (c == "all") c = "";
+          for (i = 0; i < x.length; i++) {
+            w3RemoveClass(x[i], "show");
+            if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+          }
+        }
+        
+        function w3AddClass(element, name) {
+          var i, arr1, arr2;
+          arr1 = element.className.split(" ");
+          arr2 = name.split(" ");
+          for (i = 0; i < arr2.length; i++) {
+            if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+          }
+        }
+        
+        function w3RemoveClass(element, name) {
+          var i, arr1, arr2;
+          arr1 = element.className.split(" ");
+          arr2 = name.split(" ");
+          for (i = 0; i < arr2.length; i++) {
+            while (arr1.indexOf(arr2[i]) > -1) {
+              arr1.splice(arr1.indexOf(arr2[i]), 1);     
+            }
+          }
+          element.className = arr1.join(" ");
+        }
+        
+        
+        // Add active class to the current button (highlight it)
+        var btnContainer = document.getElementById("myBtnContainer");
+        var btns = btnContainer.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+          btns[i].addEventListener("click", function(){
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+          });
+        }
+        </script>
+        
+    </body>
+</html>
+
+    
