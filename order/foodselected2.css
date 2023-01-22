@@ -7,25 +7,28 @@
     padding: 20px;
     font-family: Arial;
   }
-  
-  /* Create three unequal columns that floats next to each other */
+
+  /*DANIAL kasi tuka so both width correspond kpd 
+  device width aka kasi cantikkan dlm bentuk mobile */
+
+  /* ni utk gamba ngan text duk sbelah2 */
   .column {
     float: left;
     padding: 10px;
   }
-
+  /*ni gamba ngan text*/
   .food-selected {
     display: flex;
     background-color: rgb(255, 255, 255);
   }
-  
+  /*div dlm class ni aka text ngan gamba */
   .food-selected > div {
     margin: 5px;
     padding: 10px;
     font-size: 30px;
     width: 50%;
   }
-  
+  /* utk mknn*/
   .pic {
     background-color: rgb(255, 252, 252);
     max-width: 400px;
@@ -33,24 +36,24 @@
     border-radius: 8px;
     border-color: black;
   }
-  
+  /* utk mknn*/
   .text {
     width: 50%;
     height: auto;
     padding: 40px;
   }
   
-  /* Clear floats after the columns */
+  /* Clear floats after the columns (ni aq xtau)*/
   .row:after {
     content: "";
     display: table;
     clear: both;
   }
-
+  /*title mknn */
   .foodtitle{
     font-size:50px;
   }
-
+  /* price dia*/
   .price{
     font-size: 20px;
   }
@@ -157,9 +160,3 @@
     height:40px;
     user-select: none;
   }
-
-  
-  
-
-
-  
