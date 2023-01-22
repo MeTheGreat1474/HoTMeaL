@@ -1,0 +1,165 @@
+* {
+    box-sizing: border-box;
+  }
+
+  body{
+    background-color:aliceblue;
+    padding: 20px;
+    font-family: Arial;
+  }
+  
+  /* Create three unequal columns that floats next to each other */
+  .column {
+    float: left;
+    padding: 10px;
+  }
+
+  .food-selected {
+    display: flex;
+    background-color: rgb(255, 255, 255);
+  }
+  
+  .food-selected > div {
+    margin: 5px;
+    padding: 10px;
+    font-size: 30px;
+    width: 50%;
+  }
+  
+  .pic {
+    background-color: rgb(255, 252, 252);
+    max-width: 400px;
+    min-width: 200px;
+    border-radius: 8px;
+    border-color: black;
+  }
+  
+  .text {
+    width: 50%;
+    height: auto;
+    padding: 40px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .foodtitle{
+    font-size:50px;
+  }
+
+  .price{
+    font-size: 20px;
+  }
+
+  hr{
+    border-radius: 3px;
+  }
+
+  .remarks{
+    background-color: rgb(255, 252, 252);
+    
+  }
+
+  .remarks > div{
+    padding: 10px;
+    margin-left: 10px;
+    border-radius: 8px;
+  }
+
+  textarea{
+    resize: none;
+    height: 100px;
+    border-radius: 8px;
+    width: 100%;
+
+  }
+
+  button.button{
+    margin-top: 20px;
+    display: none;
+  }
+
+  button:hover {
+    cursor: pointer;
+  }
+
+  .footer{
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 10px;
+    vertical-align: middle;
+    font-size: 20px;
+  }
+
+  /*.footer > div{
+    background-color: #f1f1f1;
+    margin: 5px;
+    padding: 5px;
+    font-size: 10px;
+    vertical-align: middle;
+  }*/
+
+  .value{
+    background-color: #ffffff;
+    padding: 5px;
+    padding-top: 10px;
+    margin: 5px;
+    min-width: 120px;
+  }
+
+  button.basket{
+    background-color: #00b14f;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 8px;
+    color: rgb(255, 255, 255);
+    width:100%;
+  }
+
+  .addbasket{
+    width: 450px;
+    padding-right: 10px;
+  }
+
+  
+  .value-button {
+    display: inline-block;
+  }
+  
+  .value-button:hover {
+    cursor: pointer;
+  }
+  
+  form #decrease {
+    margin-right: 10px;
+    font-size: 20px;
+  }
+  
+  form #increase {
+    margin-left: 10px;
+  }
+  
+  form #input-wrap {
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  input#qty {
+    text-align: center;
+    border: 1px solid #ddd;
+    margin: 0px;
+    width: 60px;
+    height:40px;
+    user-select: none;
+  }
+
+  
+  
+
+
+  
