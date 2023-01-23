@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Food Selected</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/foodselected2.css" type="text/css" rel="stylesheet">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    </head>
+    <body>
+
+        <div class="back">
+            <a href="order2.html"> < Back </a>
+        </div>
+        <hr>
+        <!--danial ubah ni so bila width mcm phone nmpk cantik pkai css-->
+        <div class="food-selected">
+            <div class="column pic">
+                <img class="foodimg" id="img" style="width:100%">
+            </div>
+            <div class="column text">
+                <h1 id="title" class="foodtitle"></h1>
+                <input type=hidden class="price" id="price" value=""><br>
+                <h2 id="unitPrice"></h2>
+            </div>
+        </div><hr>
+
+        <!--<div class="remarks">
+            <div>
+                <h3>Add Remarks</h3>
+            </div>
+            
+            <div>
+                <textarea id="extra" name="extra" placeholder="e.g Telur mata" row="10" cols="50"></textarea><br>
+                <button id="myBtn" onclick="javascript:alert('Submitted')">submit</button>
+            </div>
+        </div><hr>-->
+
+       <div class="footer">
+            <div class="value">
+                <input type="number" min="0" class="qty" id="qty" value="0" onchange="displayValue()"> 
+            </div>
+            <div class="addbasket">
+                <a href="summarysheet.html">
+                <button class="basket" id="basket">Add to cart: RM0</button></a>
+            </div><br>
+        </div>
+
+        <script>
+            //TUKAR data here
+            //TUKAR img
+            var img = 'food.jpg';  
+            document.getElementById("img").src = img;
+            //TUKAR alt,title
+            var title = 'Burger';
+            document.getElementById("img").alt = title;
+            document.getElementById("title").innerText = title;
+            //TUKAR value,price
+            var value = '3'
+            document.getElementById("price").value = value;
+            document.getElementById("unitPrice").innerHTML = "RM"+ value +".00";
+
+
+            /*var input = document.getElementById("extra");
+            input.addEventListener("keypress", function(event) {
+            if (event.key === "Enter") {
+                event.preventDefault();
+                document.getElementById("myBtn").click();
+                }
+            });*/
+
+            //for cart calculator
+            function displayValue() {
+            var unitPrice = document.getElementById('price').value;
+            var qty = document.getElementById('qty').value;
+            total=unitPrice*qty;
+            document.getElementById('basket').innerHTML ="Add to cart: RM" + total;
+            addToCart();
+            }
+
+            let input = document.querySelector(".qty");
+            let button = document.querySelector(".basket");
+            button.disabled = true;
+
+            input.addEventListener("change", stateHandle);
+
+            function stateHandle() {
+            if (document.querySelector(".qty").value === "") {
+            button.disabled = true; //button remains disabled
+            
+            } else {
+            button.disabled = false; //button is enabled
+            }
+            }
+
+            //SET ITEM (sent data to summary)
+            //totalPrice
+            function addToCart(){ 
+            
+
+            const totalPrice = total;
+            const totalPriceString = JSON.stringify(totalPrice);
+            localStorage.setItem('totalPrice', totalPriceString);
+            //qty unit
+            const qtyUnit = document.getElementById('qty').value;
+            const qtyUnitString = JSON.stringify(qtyUnit);
+            localStorage.setItem('qtyUnit', qtyUnitString);
+            //image
+            const foodImg = img;
+            const foodImgString = JSON.stringify(foodImg);
+            localStorage.setItem('foodImg', foodImgString);
+            //Title,alt
+            const foodTitle = title;
+            const foodTitleString = JSON.stringify(foodTitle);
+            localStorage.setItem('foodTitle', foodTitleString);
+            //Price
+            const unitPrice = value;
+            const unitPriceString = JSON.stringify(unitPrice);
+            localStorage.setItem('unitPrice', unitPriceString);
+            }
+            
+        </script>
+        
+    </body>
+</html>
