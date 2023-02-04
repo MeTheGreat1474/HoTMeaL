@@ -1,0 +1,147 @@
+<html lang="en">
+<head>
+    <title>Result page</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Your Basket</title>
+    <link rel="stylesheet" href="landingpage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!--Icon Library-->
+    <script type="text/Javascript" src="result.js"></script>
+    <style>
+        .vertical-menu{
+            width: 200px;
+            height: 150px;
+            overflow-y: auto;
+        }
+
+        .vertical-menu a{
+            background-color: #eee;
+            color: black;
+            display: block;
+            padding: 12px;
+            text-decoration: none;
+        }
+
+        .vertical-menu a:hover{
+            background-color: #ccc;                
+        }
+
+        .vertical-menu a.active{
+            background-color: #4caf50;
+            color: #eee;
+        }
+    </style>
+</head>
+<body>
+
+    <section id="header">
+        <!--Header-->
+        <nav>
+           <a href="landingpage.html"><img src="header3.jpg" class="logo"></a>
+           <ul class="nav-links">
+               <a href="landingpage.html"><i class="fa fa-home"></i> Home</a>
+               <a href="shop.html"><i class="fa fa-shopping-cart"></i> Shop </a>
+               <a href="cth.html" class="active"><i class="fa fa-shopping-basket"></i> Basket</a>
+               <a href="reportpage.html"><i class="fa fa-exclamation-circle"></i> Report</a>
+               <button class="active"><i class="fa fa-user-circle"></i> Sign Out</button>
+           </ul>
+           </nav>
+   </section>
+
+    <section id="cart" class="section-p1">
+            <table width="100%">
+                <thead>
+                    <tr>
+                        <td>Remove</td>
+                        <td>Image</td>
+                        <td>Product</td>
+                        <td>Price</td>
+                        <td>Quantity</td>
+                        <td>Subtotal</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><i class="far fa-times-circle"><a href="#"></a></i></td>
+                        <td><img src="" alt="..."></td>
+                        <td>Teh ais</td>
+                        <td>RM2.00</td>
+                        <td><input type="number" value="1" min="0" max="5" maxlength="1"></td>
+                        <td>RM2.00</td>
+                    </tr>
+                    <tr>
+                        <td><i class="far fa-times-circle"><a href="#"></a></i></td>
+                        <td><img src="" alt="..."></td>
+                        <td>Teh ais</td>
+                        <td>RM2.00</td>
+                        <td><input type="number" value="1" min="0" max="5"></td>
+                        <td>RM2.00</td>
+                    </tr>
+                    <tr>
+                        <td><i class="far fa-times-circle"><a href="#"></a></i></td>
+                        <td><img src="" alt="..."></td>
+                        <td>Teh ais</td>
+                        <td>RM2.00</td>
+                        <td><input type="number" value="1" min="0" max="5"></td>
+                        <td>RM2.00</td>
+                    </tr>
+                </tbody>
+            </table>
+    </section>
+
+    
+    <form action="cth.html" method="GET">
+      Time: <input type="time" name="name" />
+
+      <input type="submit" value="Submit!" />
+    </form>
+    <p id="opTag"></p>
+
+    <script>
+      var form = document.getElementById("formId");
+      var opTag = document.getElementById("opTag");
+      function submitForm(event) {
+        event.preventDefault();
+        form.style.display = "none";
+        opTag.innerHTML = "<b>Form submit successful</b>";
+      }
+      form.addEventListener("submit", submitForm);
+    </script>
+
+    <div class="vertical-menu">
+        <a href="a" class="active">Home</a>
+        <a href="a">Link 1</a>
+        <a href="a">Link 1</a>
+        <a href="a">Link 1</a>
+    </div>
+
+    <section id="cart-add" class="section-p1">
+        <div id="subtotal">
+            <h3>Cart Total</h3>
+            <table>
+                <tr>
+                    <td>Cart Subtotal</td>
+                    <td>RM2</td>
+                </tr>
+                <tr>
+                    <td>Shipping</td>
+                    <td>Free</td>
+                </tr>
+                <tr>
+                    <td><strong>Total</strong></td>
+                    <td><strong>RM2</strong></td>
+                </tr>     
+                <tr>
+                    <td><strong>Total</strong></td>
+                    <td><strong>RM2</strong></td>
+                </tr>
+                <h4>Name: <span id="result-name" /></h4>
+            </table>
+            <button class="normal" type="submit">Proceed to Payment</button>
+        </div>
+        <h4>Pick-up Time: <span id="result-name" /></h4>
+    </section>
+
+
+</body>
+</html>
