@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Shop</title>
+    <link rel="stylesheet" href="shop.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!--Icon Library-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="cart item.js"></script>
+</head>
+<body>
+    <section id="header">
+        <!--Header-->
+        <nav>
+            <a href="collegeselection.html"><img src="header3.jpg" class="logo"></a>
+            <ul class="nav-links">
+                <a href="../landing page/landingpage.html"><i class="fa fa-home"></i> Home</a>
+                <a href="../shop page/shop.html" class="active"><i class="fa fa-shopping-cart"></i> Shop </a>
+                <a href="../basket/basket.html" ><i class="fa fa-shopping-basket"></i> Basket</a>
+                <a href="../report page/reportpage.html"><i class="fa fa-exclamation-circle"></i> Report</a>
+                <button class="active" onclick="document.location='../user login/userlogin.html'"><i class="fa fa-user-circle"></i> Sign Out</button>
+            </ul>
+            </nav>
+    </section>
+
+    <div id="shopping-cart">
+        <div class="txt-heading">
+            <h4><u>Shopping cart</u></h4>
+        </div>
+        
+        <table class="tbl-cart" cellpadding="10" cellspacing="1" width="80%">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th width="20%">Unit Price</th>
+                    <th width="10%">Quantity</th>
+                    <th width="20%">Sub Total</th>
+                </tr>
+            </thead>
+            <!--  Cart table to load data on "add to cart" action -->
+            <tbody id="cartTableBody">
+            </tbody>
+            <tfoot class="tfoot">
+                <tr>
+                    <td>Total:</td>
+                    <td></td>
+                    <td id="itemCount"></td>
+                    <td id="totalAmount" ></td>
+                </tr>
+            </tfoot>
+            
+        </table>
+        <button onClick="emptyCart()" id="btnEmpty">Empty Cart <i class="fa-trash"></i></button>
+        <button id="cart-button" onclick="document.location='../basket/basket.html'" type="button" > Go To Cart  <i class="fa fa-hand-o-right" aria-hidden="true"></i></button>
+    </div>
+
+    <section id="product1" class="section-p1">
+        <div class="txt-heading">
+            <h2><u>Menu</u></h2>
+        </div>
+        <div class="pro-container">
+
+            <!--1.change img
+                2.increment id
+                3.increment price
+                4.increment value
+                5.add script below with corresponding id
+            -->
+
+            <div class="pro">
+                <img src="pic/burger.jpg">
+                <div class="des">
+                    <h3 id="title" class="title"></h3>
+                    <h5 id="price" class="price"></h5>
+                    <input id="value" type="hidden" class="value"></h5>
+                    <input type="number" class="qty" step="1" value="1" max="10" min="0" >
+                </div>
+                <input type="submit" value="Add to Cart" class="add-to-cart" onClick="addToCart(this)" placeholder="Add to Cart"/>
+            </div>
+
+            <div class="pro">
+                <img src="pic/burger cheese.jpg">
+                <div class="des">
+                    <h3 id="title1" class="title"></h3>
+                    <h5 id="price1" class="price"></h5>
+                    <input id="value1" type="hidden" class="value"></h5>
+                    <input type="number" class="qty" step="1" value="1" max="10" min="0" >
+                </div>
+                <input type="submit" value="Add to Cart" class="add-to-cart" onClick="addToCart(this)" placeholder="Add to Cart"/>
+            </div>
+
+            <div class="pro">
+                <img src="pic/kebab.jpg">
+                <div class="des">
+                    <h3 id="title2" class="title"></h3>
+                    <h5 id="price2" class="price"></h5>
+                    <input id="value2" type="hidden" class="value"></h5>
+                    <input type="number" class="qty" step="1" value="1" max="10" min="0" >
+                </div>
+                <input type="submit" value="Add to Cart" class="add-to-cart" onClick="addToCart(this)" placeholder="Add to Cart"/>
+            </div>
+
+            <div class="pro">
+                <img src="pic/kebab cheese.png">
+                <div class="des">
+                    <h3 id="title3" class="title"></h3>
+                    <h5 id="price3" class="price"></h5>
+                    <input id="value3" type="hidden" class="value"></h5>
+                    <input type="number" class="qty" step="1" value="1" max="10" min="0" >
+                </div>
+                <input type="submit" value="Add to Cart" class="add-to-cart" onClick="addToCart(this)" placeholder="Add to Cart"/>
+            </div>
+
+            <div class="pro">
+                <img src="pic/nasi kukus.jpg">
+                <div class="des">
+                    <h3 id="title4" class="title"></h3>
+                    <h5 id="price4" class="price"></h5>
+                    <input id="value4" type="hidden" class="value"></h5>
+                    <input type="number" class="qty" step="1" value="1" max="10" min="0" >
+                </div>
+                <input type="submit" value="Add to Cart" class="add-to-cart" onClick="addToCart(this)" placeholder="Add to Cart"/>
+            </div>
+
+            <div class="pro">
+                <img src="pic/ayam kunyit.jpg">
+                <div class="des">
+                    <h3 id="title5" class="title"></h3>
+                    <h5 id="price5" class="price"></h5>
+                    <input id="value5" type="hidden" class="value"></h5>
+                    <input type="number" class="qty" step="1" value="1" max="10" min="0" >
+                </div>
+                <input type="submit" value="Add to Cart" class="add-to-cart" onClick="addToCart(this)" placeholder="Add to Cart"/>
+            </div>
+
+            <div class="pro">
+                <img src="pic/spaggetti.jpg">
+                <div class="des">
+                    <h3 id="title6" class="title"></h3>
+                    <h5 id="price6" class="price"></h5>
+                    <input id="value6" type="hidden" class="value"></h5>
+                    <input type="number" class="qty" step="1" value="1" max="10" min="0" >
+                </div>
+                <input type="submit" value="Add to Cart" class="add-to-cart" onClick="addToCart(this)" placeholder="Add to Cart"/>
+            </div>
+
+            <div class="pro">
+                <img src="pic/rice bowl.jpg">
+                <div class="des">
+                    <h3 id="title7" class="title"></h3>
+                    <h5 id="price7" class="price"></h5>
+                    <input id="value7" type="hidden" class="value"></h5>
+                    <input type="number" class="qty" step="1" value="1" max="10" min="0" >
+                </div>
+                <input type="submit" value="Add to Cart" class="add-to-cart" onClick="addToCart(this)" placeholder="Add to Cart"/>
+            </div>
+
+            <div class="pro">
+                <img src="pic/chicken chop.jpg">
+                <div class="des">
+                    <h3 id="title8" class="title"></h3>
+                    <h5 id="price8" class="price"></h5>
+                    <input id="value8" type="hidden" class="value"></h5>
+                    <input type="number" class="qty" step="1" value="1" max="10" min="0" >
+                </div>
+                <input type="submit" value="Add to Cart" class="add-to-cart" onClick="addToCart(this)" placeholder="Add to Cart"/>
+            </div>
+
+            <div class="pro">
+                <img src="pic/yee mee.jpg">
+                <div class="des">
+                    <h3 id="title9" class="title"></h3>
+                    <h5 id="price9" class="price"></h5>
+                    <input id="value9" type="hidden" class="value"></h5>
+                    <input type="number" class="qty" step="1" value="1" max="10" min="0" >
+                </div>
+                <input type="submit" value="Add to Cart" class="add-to-cart" onClick="addToCart(this)" placeholder="Add to Cart"/>
+            </div>
+
+            <div class="pro">
+                <img src="pic/oden.jpg">
+                <div class="des">
+                    <h3 id="title10" class="title"></h3>
+                    <h5 id="price10" class="price"></h5>
+                    <input id="value10" type="hidden" class="value"></h5>
+                    <input type="number" class="qty" step="1" value="1" max="10" min="0" >
+                </div>
+                <input type="submit" value="Add to Cart" class="add-to-cart" onClick="addToCart(this)" placeholder="Add to Cart"/>
+            </div>
+            
+        </div>
+    </section>
+    
+
+    <script >//food menu goes here
+
+        title = "Burger Biasa";
+        price = 3.00;
+        document.getElementById("title").innerText = title;
+        document.getElementById("price").innerText = "RM "+ price + ".00";
+        document.getElementById("value").innerText = price;
+
+        title = "Burger Cheese Leleh";
+        price = 4.00;
+        document.getElementById("title1").innerText = title;
+        document.getElementById("price1").innerText = "RM "+ price + ".00";
+        document.getElementById("value1").innerText = price;
+
+        title = "Kebab Biasa";
+        price = 3.00;
+        document.getElementById("title2").innerText = title;
+        document.getElementById("price2").innerText = "RM "+ price + ".00";
+        document.getElementById("value2").innerText = price;
+
+        title = "Kebab Cheese Leleh";
+        price = 4.00;
+        document.getElementById("title3").innerText = title;
+        document.getElementById("price3").innerText = "RM "+ price + ".00";
+        document.getElementById("value3").innerText = price;
+
+        title = "Nasi Ayam Kukus";
+        price = 6.00;
+        document.getElementById("title4").innerText = title;
+        document.getElementById("price4").innerText = "RM "+ price + ".00";
+        document.getElementById("value4").innerText = price;
+
+        title = "Nasi Ayam Kunyit";
+        price = 5.00;
+        document.getElementById("title5").innerText = title;
+        document.getElementById("price5").innerText = "RM "+ price + ".00";
+        document.getElementById("value5").innerText = price;
+
+        title = "Spaghetti";
+        price = 6.00;
+        document.getElementById("title6").innerText = title;
+        document.getElementById("price6").innerText = "RM "+ price + ".00";
+        document.getElementById("value6").innerText = price;
+
+        title = "Rice Bowl";
+        price = 7.00;
+        document.getElementById("title7").innerText = title;
+        document.getElementById("price7").innerText = "RM "+ price + ".00";
+        document.getElementById("value7").innerText = price;
+
+        title = "Chicken Chop";
+        price = 7.00;
+        document.getElementById("title8").innerText = title;
+        document.getElementById("price8").innerText = "RM "+ price + ".00";
+        document.getElementById("value8").innerText = price;
+
+        title = "Sizzling Yee Mee";
+        price = 6.50;
+        document.getElementById("title9").innerText = title;
+        document.getElementById("price9").innerText = "RM "+ price + ".00";
+        document.getElementById("value9").innerText = price;
+
+        title = "Oden";
+        price = 6.00;
+        document.getElementById("title10").innerText = title;
+        document.getElementById("price10").innerText = "RM "+ price + ".00";
+        document.getElementById("value10").innerText = price;
+
+
+    </script>
+    
+    </body>
+</html>

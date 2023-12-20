@@ -1,0 +1,190 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial;
+    user-select: none;
+    /*background-image: linear-gradient(to right, #DABDEB, #8C75CA);*/
+}
+
+.main { /*center web*/
+    max-width: 1000px;
+    margin: auto;
+}
+
+.header{
+    overflow:hidden;
+    /*height: 20vh;
+    width: 100%;*/
+    padding: 0px 30px;
+    background: #fff;
+    position: sticky;
+    user-select: none; /*avoid user to select element*/
+    z-index: 999;
+    top: 0px; /*-10px*/
+    box-shadow: 0 -6px 10px 5px rgba(0, 0, 0, 0.5);
+}
+
+nav{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    width: 300px;
+    cursor: pointer;
+}
+
+.nav-links{
+    padding: 28px 0;
+}
+
+.nav-links a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight:600;
+    position: relative;
+    display:inline-block;
+    padding: 0 15px;
+    color:black;
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active{
+    color: #088178;
+}
+
+.nav-links a.active::after,
+.nav-links a:hover::after{
+    content: "";
+    width: 50%;
+    height: 2px;
+    background: #088178;
+    position: absolute;
+    bottom: -6px;
+    left: 15px;
+}
+
+.nav-links button{
+    border-radius: 60px;
+    cursor: pointer;
+    background-color: whitesmoke;
+    border: none;
+    color: black;
+    padding: 10px 15px;
+    text-align: center;
+    font-size: 16px;
+    font-family: monospace;
+    margin: 0px 2px;
+    transition: 0.3s;
+}
+.nav-links button.active{
+    /*background: linear-gradient(to left, #4286f4 0%, #00509d 100%);*/
+    color: white;
+    background: #088178;;
+}
+
+h1{
+    text-align:center;
+    color: #00509d;
+    padding: 25px;
+    padding-bottom: 25px;
+    word-break: break-all;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.cardstyle{
+    display: flex;
+    width: 100%;
+    /*justify-content: space-evenly;*/
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+/* overlay style */
+.overlay {
+    position: absolute;
+    border-radius: 10px;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5); /* Black see-through */
+    color: #f1f1f1; 
+    width: 300px;
+    height: 334.4px;
+    transition: .5s ease;
+    opacity: 0;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+
+.text{
+    text-align: center;
+    margin: 15px;
+    margin-top: 150px;
+}
+
+.cafe:hover .overlay{
+    opacity: 1;
+}/* End of overlay style */
+
+.column {
+    margin: 35px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    width: 300px;
+    transition: 0.2s;
+}
+
+.column:hover{
+    -ms-transform: scale(1.15); /* IE 9 */
+    -webkit-transform: scale(1.15); /* Safari 3-8 */
+    transform: scale(1.15);
+    outline: black;
+    outline-style: solid;
+}
+
+/* Content */
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    min-height: 250px;
+}
+
+h4{
+    margin-left: 40%;
+}
+
+.content img{
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+}
+
+.card{
+    border: none;
+    border-radius: 15px;
+    outline: none;
+    padding: 15px 100px;
+    margin: 15px 15px;
+    background-color: #ddd;
+    cursor: pointer;
+    transition: 0.3s;
+    color:black;
+}
+
+.card:hover{
+    background: linear-gradient(109.6deg, rgb(0, 204, 130) 11.2%, rgb(58, 181, 46) 91.7%);
+    color: white;
+
+}

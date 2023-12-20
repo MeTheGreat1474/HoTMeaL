@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Your Basket</title>
+    <link rel="stylesheet" href="basket.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!--Icon Library-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="basket.js"></script>
+</head>
+<body>
+    <section id="header">
+         <!--Header-->
+         <nav>
+            <a href="landingpage.html"><img src="header3.jpg" class="logo"></a>
+            <ul class="nav-links">
+                <a href="../landing page/landingpage.html"><i class="fa fa-home"></i> Home</a>
+                <a href="../shop page/shop.html"><i class="fa fa-shopping-cart"></i> Shop </a>
+                <a href="../basket/basket.html" class="active"><i class="fa fa-shopping-basket"></i> Basket</a>
+                <a href="../report page/reportpage.html"><i class="fa fa-exclamation-circle"></i> Report</a>
+                <button class="active" onclick="document.location='../user login/userlogin.html'"><i class="fa fa-user-circle"></i> Sign Out</button>
+            </ul>
+            </nav>
+    </section>
+
+    <div class="cartbox">
+    <section id="cart" class="section-p1">
+        <table width="auto">
+            <thead>
+                <tr>
+                    <td>Product</td>
+                    <td>Price</td>
+                    <td>Quantity</td>
+                    <td>Subtotal</td>
+                </tr>
+            </thead>
+            <tbody id="cartTableBody">
+
+            </tbody>
+        </table>
+    </section>
+    </div>
+
+    <section id="cart-add" class="section-p1">
+          
+        
+
+        <div id="subtotal">
+            <h3>Receipt</h3>
+            <table>
+                <tr>
+                    <td>Pickup Time</td>
+                    <td id="pickup-time"> 
+                    <form>
+                        <select id="timePicker" onfocus="this.value=''" onchange="return checkTime();">
+                          <option value="07:00">7:00 AM</option>
+                          <option value="07:30">7:30 AM</option>
+                          <option value="08:00">8:00 AM</option>
+                          <option value="08:30">8:30 AM</option>
+                          <option value="09:00">9:00 AM</option>
+                          <option value="09:30">9:30 AM</option>
+                          <option value="10:00">10:00 AM</option>
+                          <option value="10:30">10:30 AM</option>
+                          <option value="11:00">11:00 AM</option>
+                          <option value="11:30">11:30 AM</option>
+                          <option value="12:00">12:00 PM</option>
+                          <option value="12:30">12:30 PM</option>
+                          <option value="13:00">1:00 PM</option>
+                          <option value="13:30">1:30 PM</option>
+                          <option value="14:00">2:00 PM</option>
+                          <option value="14:30">2:30 PM</option>
+                          <option value="15:00">3:00 PM</option>
+                          <option value="15:30">3:30 PM</option>
+                          <option value="16:00">4:00 PM</option>
+                          <option value="16:30">4:30 PM</option>
+                          <option value="17:00">5:00 PM</option>
+                          <option value="17:30">5:30 PM</option>
+                          <option value="18:00">6:00 PM</option>
+                          <option value="18:30">6:30 PM</option>
+                          <option value="19:00">7:00 PM</option>
+                          <option value="19:30">7:30 PM</option>
+                          <option value="20:00">8:00 PM</option>
+                          <option value="20:30">8:30 PM</option>
+                          <option value="21:00">9:00 PM</option>
+                          <option value="21:30">9:30 PM</option>
+                          <!-- Add more options for different times -->
+                        </select><br>
+                    </form><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Turn Number</td>
+                    <td id="numberTurn"></td>
+                </tr>
+                <tr>
+                    <td>Cart Subtotal</td>
+                    <td id="cart-subtotal"></td>
+                </tr>
+                <tr>
+                    <td>Charge</td>
+                    <td>+ 0.10</td>
+                </tr>
+                <tr>
+                    <td><strong>Total</strong></td>
+                    <td id='cart-total'><strong></strong></td>
+                </tr>
+            </table>
+            <button class="normal" onclick="document.location='../shop page/shop.html'"><i class="fa fa-hand-o-left " aria-hidden="true"></i> Add More?</button>
+            <button class="normal" type="submit" onclick="orderAccepted()">Confirm Order <i class="fa fa-hand-o-right" aria-hidden="true"></i></button>
+            
+        </div>
+        
+    </section>
+
+    <footer class="section-p1">
+
+    </footer>
+
+    <script>
+
+        var retrievedArray = JSON.parse(sessionStorage.getItem('shopping-cart'));
+        console.log(retrievedArray);
+
+        const cartTableBody = document.getElementById('cartTableBody');
+
+        retrievedArray.forEach(function(item) {
+        var item = JSON.parse(item);
+        price = parseFloat(item.price);
+        quantity = parseInt(item.quantity);
+        subtotal = price * quantity;
+
+        const newRow = cartTableBody.insertRow();
+        newRow.insertCell().innerHTML = item.title;
+        newRow.insertCell().innerHTML = "RM " + price + ".00";
+        newRow.insertCell().innerHTML = quantity;
+        newRow.insertCell().innerHTML = "RM " + subtotal + ".00";
+        });
+
+        const subTotalPriceString = localStorage.getItem('totalPrice');
+        const subTotalPrice = parseFloat(subTotalPriceString);
+        console.log(subTotalPrice)
+        document.getElementById('cart-subtotal').value = subTotalPrice;
+        document.getElementById('cart-subtotal').innerHTML ="RM " + subTotalPrice.toFixed(2);
+
+        totalPrice = subTotalPrice + 0.10
+        console.log(totalPrice)
+        document.getElementById('cart-total').innerHTML ="RM " + totalPrice.toFixed(2);
+
+
+        /*//title,alt
+        const titleString = localStorage.getItem('title');
+        const title = JSON.parse(titleString);
+        //price unit
+        const priceString = localStorage.getItem('price');
+        const price = parseFloat(priceString);
+
+        const qtyString = localStorage.getItem('qty');
+        const qty = JSON.parse(qtyString);*/
+
+        function checkTime() {
+        var currentTime = new Date();
+        var picker = document.getElementById("timePicker");
+        var selectedTime = new Date();
+        selectedTime.setHours(picker.options[picker.selectedIndex].value.split(":")[0]);
+        selectedTime.setMinutes(picker.options[picker.selectedIndex].value.split(":")[1]);
+        var difference = (selectedTime - currentTime) / 1000 / 60;
+        if (difference < 15) {
+        alert("Please select a time that is at least 15 minutes from the current time.");
+        return false;
+        }
+        return true;
+        }
+
+        //random number for turn
+        let randomNumber = Math.floor((Math.random() * 1000) + 1);
+        document.getElementById("numberTurn").innerHTML = randomNumber;
+
+        function orderAccepted(){
+            window.alert("Your order has been send.\nPlease wait for confirmation by seller");
+        }
+
+    </script>
+    
+    </body>
+</html>
