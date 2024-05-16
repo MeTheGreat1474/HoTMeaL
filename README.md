@@ -1,5 +1,6 @@
 # PCAMS
-first project,  a food ordering system for foundation uses
+A prototype web-based food ordering system
+for inter-foundation innovation competiton uses
 develop by :-
 Luqman Hakim ,
 Ammar Danial ,
